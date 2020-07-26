@@ -1,7 +1,17 @@
+/*****************************************************************************/
+/*******************    Configurações gerais    ******************************/
+/*****************************************************************************/
+
+@font-face {
+    src: url('../fonts/Oswald-Regular.ttf');
+    font-family: 'Oswald';
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
 }
 
 html, body {
@@ -14,6 +24,10 @@ html, body {
     margin: 0 auto;
     display: flex;
 }
+
+/*****************************************************************************/
+/*******************    Cabeçalho    *****************************************/
+/*****************************************************************************/
 
 header {
     padding: 30px 2%;
@@ -33,6 +47,7 @@ header nav ul {
 header nav ul li {
     font-size: 23px;
     padding: 0 30px;
+    font-style: italic;
 }
 
 header nav ul li a {
@@ -44,11 +59,13 @@ header nav ul li a.ativo {
     color: #f0c540;
 }
 
+/*****************************************************************************/
+/*******************    Banner    ********************************************/
+/*****************************************************************************/
+
 section.banner {
     width: 100%;
-    height: 100vw;
-    min-height: 600px;
-    max-height: 800px;
+    height: 650px;
     background-color: #e5e5e5;
     background-image: url('../images/banner.jpg');
     background-size: contain;
@@ -56,10 +73,80 @@ section.banner {
     background-repeat: no-repeat;
 }
 
-@media screen and (max-width: 768px) {
+.text-banner {
+    padding: 80px;
+}
+
+.text-banner-single {
+    width: 230px;;
+    height: 60px;
+    margin-top: 20px;
+    padding: 12px 0 12px 30px;
+    color: white;
+    font-size: 23px;
+    font-style: italic;
+    text-transform: uppercase;
+    background-image: url('../images/box-text.png');
+    background-size: 100% 100%;
+}
+
+.text-banner .text-banner-single:nth-of-type(2) {
+    width: 200px;
+    position: relative;
+    left: -10px;
+}
+
+.text-banner .text-banner-single:nth-of-type(3) {
+    width: 170px;
+    position: relative;
+    left: -20px;
+}
+
+.text-banner .text-banner-single:nth-of-type(4) {
+    width: 280px;
+    height: 50px;
+    padding: 10px 0 10px 30px;
+    color: #2a4045;
+    font-size: 18px;
+    position: relative;
+    left: -30px;
+    background-image: url('../images/box-white-text.png');
+}
+
+@media screen and (max-width: 1400px) {
     section.banner {
+        background-size: 90% auto;
+        background-position: 120% 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    header nav ul li {
+        padding: 0 15px;
+    }
+
+    section.banner {
+        background-size: cover;
+        background-position: center;
         height: 70vw;
-        min-height: 0;
-        max-height: 800px;
+        min-height: 500px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    header nav {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .text-banner {
+        padding: 30px 0 30px 40px;
+    }
+    
+    .text-banner-single {
+        height: 50px;
+        color: white;
+        font-size: 18px;
     }
 }
