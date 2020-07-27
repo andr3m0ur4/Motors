@@ -120,19 +120,23 @@ section.banner {
 
 section.veiculos-destaque {
     padding: 90px 2%;
-    display: flex;
+}
+
+section.veiculos-destaque .container {
+    max-width: 1000px;
+    padding: 40px 0 0;
     justify-content: center;
     align-items: center;
 }
 
 section.veiculos-destaque span.line-titulo {
     width: 100%;
-    max-width: 300px;
+    max-width: 500px;
     height: 2px;
     border: 2px solid #273f44;
 }
 
-section.veiculos-destaque h2 {
+section.veiculos-destaque .container > h2 {
     text-align: center;
     font-size: 27px;
     font-style: italic;
@@ -140,6 +144,67 @@ section.veiculos-destaque h2 {
     color: #273f44;
     padding: 0 20px;
     min-width: 300px;
+}
+
+.vitrine-destaque {
+    width: 33.3%;
+}
+
+.vitrine-destaque .carro-img {
+    width: 100%;
+    border: 8px solid white;
+    padding-top: 70%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.vitrine-destaque:nth-of-type(1) .carro-img {
+    background-image: url('../images/carro1.png');
+}
+
+.vitrine-destaque:nth-of-type(2) .carro-img {
+    background-image: url('../images/carro3.png');
+}
+
+.vitrine-destaque:nth-of-type(3) .carro-img {
+    background-image: url('../images/carro2.png');
+}
+
+.vitrine-destaque .info-carro {
+    padding-left: 8px;
+}
+
+.vitrine-destaque h2 {
+    color: black;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.vitrine-destaque p {
+    color: #353535;
+    font-size: 15px;
+    padding-top: 8px;
+    font-style: italic;
+}
+
+.vitrine-destaque a {
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px #d6a921;
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    background-color: #f0c540;
+    text-decoration: none;
+    width: 150px;
+    display: inline-block;
+}
+
+.vitrine-destaque a:hover {
+    background-color: #353535;
+    box-shadow: 2px 2px 2px #292929;
 }
 
 @media screen and (max-width: 1400px) {
@@ -187,6 +252,16 @@ section.veiculos-destaque h2 {
     header nav ul li {
         padding: 20px 0;
     }
+
+    section.veiculos-destaque .container:last-child {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .vitrine-destaque {
+        width: 70%;
+        margin-top: 20px;
+    }
 }
 
 @media screen and (max-width: 580px) {
@@ -198,5 +273,15 @@ section.veiculos-destaque h2 {
         height: 50px;
         color: white;
         font-size: 18px;
+    }
+
+    section.veiculos-destaque .container > h2 {
+        font-size: 23px;
+        padding: 0 10px;
+        min-width: 260px;
+    }
+
+    .vitrine-destaque {
+        width: 90%;
     }
 }
