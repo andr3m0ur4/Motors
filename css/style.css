@@ -46,6 +46,30 @@ html, body {
     width: 50%;
 }
 
+.container-title {
+    margin: 0 auto;
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span.line-titulo {
+    width: 100%;
+    max-width: 500px;
+    height: 2px;
+    border: 2px solid #273f44;
+}
+
+.container-title > h2 {
+    text-align: center;
+    font-size: 27px;
+    font-style: italic;
+    text-transform: uppercase;
+    color: #273f44;
+    padding: 0 20px;
+}
+
 /*****************************************************************************/
 /*******************    Cabeçalho    *****************************************/
 /*****************************************************************************/
@@ -53,6 +77,10 @@ html, body {
 header {
     padding: 30px 2%;
     background-color: #23393d;
+}
+
+header.borda {
+    border-bottom: 3px solid #f0c540;
 }
 
 header .container {
@@ -143,27 +171,18 @@ section.veiculos-destaque {
     padding: 90px 2%;
 }
 
-section.veiculos-destaque .container, section.contato .container {
+section.veiculos-destaque .container-title {
     max-width: 1000px;
-    padding: 40px 0 0;
+}
+
+section.veiculos-destaque .container {
+    max-width: 1000px;
+    padding-top: 40px;
     justify-content: center;
     align-items: center;
 }
 
-span.line-titulo {
-    width: 100%;
-    max-width: 500px;
-    height: 2px;
-    border: 2px solid #273f44;
-}
-
-section.veiculos-destaque .container > h2, section.contato .container > h2 {
-    text-align: center;
-    font-size: 27px;
-    font-style: italic;
-    text-transform: uppercase;
-    color: #273f44;
-    padding: 0 20px;
+section.veiculos-destaque .container-title > h2 {
     min-width: 300px;
 }
 
@@ -324,8 +343,8 @@ section.contato {
     padding: 80px 2%;
 }
 
-section.contato .container > h2 {
-    min-width: auto;
+section.contato .container-title {
+    max-width: 1000px;
 }
 
 section.contato form {
@@ -405,6 +424,109 @@ footer p {
     color: white;
     font-size: 19px;
     font-style: italic;
+}
+
+section.venda {
+    min-height: 90%;
+    padding: 90px 0;
+}
+
+section.venda .container-title {
+    max-width: 1280px;
+}
+
+section.venda .container-title > h2 {
+    min-width: 300px;
+}
+
+aside {
+    width: 30%;
+}
+
+.search {
+    width: 300px;
+}
+
+.search h2 {
+    font-size: 24px;
+    color: black;
+    font-weight: normal;
+}
+
+.search .barra-preco {
+    width: 100%;
+    height: 20px;
+    margin-top: 8px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    position: relative;
+}
+
+.barra-preco-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30%;
+    height: 20px;
+    border-radius: 20px;
+    background-color: rgb(200, 200, 200);
+}
+
+.pointer-barra {
+    width: 26px;
+    height: 26px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: rgb(210, 210, 210);
+    position: absolute;
+    left: calc(30% - 13px);
+    top: -3px;
+    cursor: pointer;
+}
+
+.valor-pesquisa {
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.valor-pesquisa p {
+    font-size: 15px;
+}
+
+.search2 {
+    margin-top: 40px;
+}
+
+.search2 h2 {
+    font-size: 24px;
+    color: black;
+    font-weight: normal;
+}
+
+.form-venda-wrapper {
+    margin-top: 10px;
+}
+
+.form-venda-wrapper input[type=checkbox] {
+    display: none;
+}
+
+.form-venda-wrapper label {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.form-venda-wrapper span {
+    padding: 0 10px;
+    display: inline-block;
+    vertical-align: top;
 }
 
 @media screen and (max-width: 1400px) {
