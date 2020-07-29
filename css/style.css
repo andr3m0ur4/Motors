@@ -363,7 +363,7 @@ section.contato form {
     max-width: 600px;
     display: flex;
     flex-wrap: wrap;
-    margin: 40px auto;
+    margin: 30px auto;
     justify-content: center;
 }
 
@@ -375,17 +375,19 @@ section.contato .input-wrapper {
 section.contato input[type=text], section.contato input[type=email], section.contato input[type=tel] {
     width: 100%;
     border: 1px solid #ccc;
-    height: 40px;
-    line-height: 40px;
     padding-left: 15px;
+    height: 60px;
+    line-height: 40px;
+    font-size: 16px;
 }
 
 section.contato textarea {
     width: 100%;
-    height: 120px;
+    height: 140px;
     border: 1px solid #ccc;
-    padding-left: 8px;
+    padding: 8px;
     resize: none;
+    font-size: 16px;
 }
 
 section.contato .btn {
@@ -585,7 +587,7 @@ section.venda-single {
 }
 
 section.venda-single .container {
-    padding: 40px 0;
+    padding-top: 40px;
     max-width: 1080px;
 }
 
@@ -593,23 +595,41 @@ section.venda-single .container {
     width: 60%;
 }
 
+.info-link {
+    padding: 20px 0;
+}
+
+.info-link a {
+    text-decoration: none;
+    color: black;
+}
+
+.info-link a:last-child {
+    color: #f0c540;
+}
+
+.info-link span {
+    padding: 0 30px;
+}
+
 .foto-destaque {
     width: 100%;
     padding-top: 60%;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-image: url('../images/carro2.png');
     background-repeat: no-repeat;
 }
 
 .descricao-veiculo {
     width: 40%;
-    padding: 20px;
+    padding: 60px 20px;
 }
 
 .descricao-veiculo p {
     max-width: 360px;
     margin-top: 25px;
+    font-size: 17px;
 }
 
 .descricao-veiculo a {
@@ -617,10 +637,40 @@ section.venda-single .container {
     padding: 0 20px;
 }
 
+.nav-galeria-parent {
+    width: 100%;
+    padding: 36px;
+    position: relative;
+}
+
+.arrow-left-nav {
+    position: absolute;
+    left: 8px;
+    top: 45%;
+    transform: translate(-45%);
+    -ms-transform: translate(-45%);
+    background-image: url('../images/arrow-left.png');
+    background-size: 100% 100%;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.arrow-right-nav {
+    position: absolute;
+    right: 0;
+    top: 45%;
+    transform: translate(-45%);
+    -ms-transform: translate(-45%);
+    background-image: url('../images/arrow-right.png');
+    background-size: 100% 100%;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
 .nav-galeria {
     width: 100%;
-    margin-top: 15px;
-    padding: 15px;
     overflow: hidden;
 }
 
@@ -629,35 +679,46 @@ section.venda-single .container {
     display: flex;
 }
 
-.mini-img {
-    background-position: center;
-    background-size: cover;
-    border: 7px solid white;
-    padding-top: calc(33.3% * (100 / 200) * 0.6);
+.mini-img-wrapper {
+    padding: 7px;
     width: calc(33.3% * (100 / 200));
 }
 
-.mini-img:nth-of-type(1) {
+.nav-galeria-wrapper .ativo {
+    background-color: rgb(210, 210, 210);
+}
+
+.mini-img {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-color: white;
+    border: 5px solid white;
+    padding-top: 60%;
+    cursor: pointer;
+}
+
+.mini-img-wrapper:nth-of-type(1) .mini-img {
     background-image: url('../images/carro1.png');
 }
 
-.mini-img:nth-of-type(2) {
+.mini-img-wrapper:nth-of-type(2) .mini-img {
     background-image: url('../images/carro2.png');
 }
 
-.mini-img:nth-of-type(3) {
+.mini-img-wrapper:nth-of-type(3) .mini-img {
     background-image: url('../images/carro3.png');
 }
 
-.mini-img:nth-of-type(4) {
+.mini-img-wrapper:nth-of-type(4) .mini-img {
     background-image: url('../images/carro4.png');
 }
 
-.mini-img:nth-of-type(5) {
+.mini-img-wrapper:nth-of-type(5) .mini-img {
     background-image: url('../images/carro5.png');
 }
 
-.mini-img:nth-of-type(6) {
+.mini-img-wrapper:nth-of-type(6) .mini-img {
     background-image: url('../images/carro6.png');
 }
 
@@ -810,6 +871,24 @@ section.venda-single + section.contato + section.veiculos-destaque {
     .vitrine-venda {
         width: 100%;
     }
+
+    section.venda-single .container {
+        flex-direction: column;
+    }
+
+    .info-veiculo {
+        width: 100%;
+    }
+
+    .descricao-veiculo {
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .descricao-veiculo p {
+        max-width: none;
+    }
 }
 
 @media screen and (max-width: 580px) {
@@ -857,5 +936,9 @@ section.venda-single + section.contato + section.veiculos-destaque {
 
     footer p {
         margin-top: 0;
+    }
+
+    .mini-img-wrapper {
+        padding: 5px;
     }
 }
