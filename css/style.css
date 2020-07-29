@@ -210,6 +210,18 @@ section.veiculos-destaque .container-title > h2 {
     background-image: url('../images/carro2.png');
 }
 
+.vitrine-destaque:nth-of-type(4) .carro-img {
+    background-image: url('../images/carro4.png');
+}
+
+.vitrine-destaque:nth-of-type(5) .carro-img {
+    background-image: url('../images/carro5.png');
+}
+
+.vitrine-destaque:nth-of-type(6) .carro-img {
+    background-image: url('../images/carro6.png');
+}
+
 .vitrine-destaque .info-carro {
     padding-left: 8px;
 }
@@ -391,6 +403,10 @@ footer {
     background-color: #23393d;
 }
 
+footer.borda {
+    border-top: 3px solid #f0c540;
+}
+
 footer .container {
     justify-content: space-between;
     flex-wrap: wrap;
@@ -426,9 +442,13 @@ footer p {
     font-style: italic;
 }
 
+/*****************************************************************************/
+/*******************    Página de Venda    **********************************/
+/*****************************************************************************/
+
 section.venda {
     min-height: 90%;
-    padding: 90px 0;
+    padding: 90px 2%;
 }
 
 section.venda .container-title {
@@ -444,7 +464,7 @@ aside {
 }
 
 .search {
-    width: 300px;
+    width: 90%;
 }
 
 .search h2 {
@@ -470,15 +490,15 @@ aside {
     width: 30%;
     height: 20px;
     border-radius: 20px;
-    background-color: rgb(200, 200, 200);
+    background-image: linear-gradient(to bottom, white, rgb(200, 200, 200));
 }
 
 .pointer-barra {
     width: 26px;
     height: 26px;
-    border: 1px solid black;
+    border: 1px solid #777;
     border-radius: 8px;
-    background-color: rgb(210, 210, 210);
+    background-image: linear-gradient(to bottom, white, rgb(180, 180, 180));
     position: absolute;
     left: calc(30% - 13px);
     top: -3px;
@@ -521,12 +541,39 @@ aside {
     border-radius: 3px;
     vertical-align: top;
     cursor: pointer;
+    position: relative;
+}
+
+.circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: black;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    display: none;
+}
+
+.form-venda-wrapper input[type=checkbox]:checked + label > .circle {
+    display: block;
 }
 
 .form-venda-wrapper span {
     padding: 0 10px;
     display: inline-block;
     vertical-align: top;
+}
+
+.vitrine-venda {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.vitrine-venda .vitrine-destaque {
+    margin-top: 20px;
 }
 
 @media screen and (max-width: 1400px) {
@@ -579,7 +626,7 @@ aside {
     }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 768px) {
     .w50 {
         width: 100%;
     }
@@ -614,7 +661,7 @@ aside {
         text-align: center;
     }
 
-    .vitrine-destaque {
+    section.veiculos-destaque .container .vitrine-destaque {
         width: 70%;
         margin-top: 20px;
     }
@@ -648,6 +695,28 @@ aside {
         margin-top: 10px;
         text-align: center;
     }
+
+    .content-venda .container {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+        text-align: center;
+    }
+
+    .search {
+        display: inline-block;
+    }
+
+    .search2 {
+        display: inline-block;
+        text-align: left;
+    }
+
+    .vitrine-venda {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 580px) {
@@ -661,10 +730,10 @@ aside {
         font-size: 18px;
     }
 
-    section.veiculos-destaque .container > h2 {
+    section.veiculos-destaque .container-title > h2, section.venda .container-title > h2 {
         font-size: 23px;
         padding: 0 10px;
-        min-width: 260px;
+        min-width: 230px;
     }
 
     .vitrine-destaque {
@@ -682,6 +751,11 @@ aside {
 
     .nome-depoimento {
         font-size: 13px;
+    }
+
+    section.venda .vitrine-venda {
+        justify-content: center;
+        text-align: center;
     }
 
     footer nav {
