@@ -576,6 +576,99 @@ aside {
     margin-top: 20px;
 }
 
+/*****************************************************************************/
+/*******************    Página de Veículo    **********************************/
+/*****************************************************************************/
+
+section.venda-single {
+    padding: 80px 2% 0 2%;
+}
+
+section.venda-single .container {
+    padding: 40px 0;
+    max-width: 1080px;
+}
+
+.info-veiculo {
+    width: 60%;
+}
+
+.foto-destaque {
+    width: 100%;
+    padding-top: 60%;
+    background-position: center;
+    background-size: contain;
+    background-image: url('../images/carro2.png');
+    background-repeat: no-repeat;
+}
+
+.descricao-veiculo {
+    width: 40%;
+    padding: 20px;
+}
+
+.descricao-veiculo p {
+    max-width: 360px;
+    margin-top: 25px;
+}
+
+.descricao-veiculo a {
+    margin-top: 25px;
+    padding: 0 20px;
+}
+
+.nav-galeria {
+    width: 100%;
+    margin-top: 15px;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.nav-galeria-wrapper {
+    width: 200%;
+    display: flex;
+}
+
+.mini-img {
+    background-position: center;
+    background-size: cover;
+    border: 7px solid white;
+    padding-top: calc(33.3% * (100 / 200) * 0.6);
+    width: calc(33.3% * (100 / 200));
+}
+
+.mini-img:nth-of-type(1) {
+    background-image: url('../images/carro1.png');
+}
+
+.mini-img:nth-of-type(2) {
+    background-image: url('../images/carro2.png');
+}
+
+.mini-img:nth-of-type(3) {
+    background-image: url('../images/carro3.png');
+}
+
+.mini-img:nth-of-type(4) {
+    background-image: url('../images/carro4.png');
+}
+
+.mini-img:nth-of-type(5) {
+    background-image: url('../images/carro5.png');
+}
+
+.mini-img:nth-of-type(6) {
+    background-image: url('../images/carro6.png');
+}
+
+section.venda-single + section.contato {
+    padding: 0 2%;
+}
+
+section.venda-single + section.contato + section.veiculos-destaque {
+    padding: 0 2% 90px 2%;
+}
+
 @media screen and (max-width: 1400px) {
     section.banner {
         background-size: 90% auto;
