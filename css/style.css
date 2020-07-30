@@ -793,6 +793,102 @@ section.sobre .descricao-autor-sobre {
     font-size: 16px;
 }
 
+/*****************************************************************************/
+/*******************    Página Galeria    **************************************/
+/*****************************************************************************/
+
+section.galeria {
+    min-height: 90%;
+    padding: 40px 2% 60px 2%;
+}
+
+section.galeria .container {
+    max-width: 840px;
+    margin-top: 40px;
+    flex-direction: column;
+}
+
+.img-principal {
+    width: 100%;
+    border: 12px solid rgb(210, 210, 210);
+    padding-top: 60%;
+    background-image: url('../images/banner.jpg');
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.galeria-img {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img-single {
+    width: calc(100% / 4);
+    border: 8px solid white;
+    padding-top: calc(100% / 4 * 0.6);
+    background-color: rgb(210, 210, 210);
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.img-single:nth-child(4n + 1) {
+    border-left: 0;
+}
+
+.img-single:nth-child(4n + 4) {
+    border-right: 0;
+}
+
+.img-single:nth-of-type(1) {
+    background-image: url('../images/carro1.png');
+}
+
+.img-single:nth-of-type(2) {
+    background-image: url('../images/carro2.png');
+}
+
+.img-single:nth-of-type(3) {
+    background-image: url('../images/carro3.png');
+}
+
+.img-single:nth-of-type(4) {
+    background-image: url('../images/carro4.png');
+}
+
+.img-single:nth-of-type(5) {
+    background-image: url('../images/carro5.png');
+}
+
+.img-single:nth-of-type(6) {
+    background-image: url('../images/carro6.png');
+}
+
+.img-single:nth-of-type(7) {
+    background-image: url('../images/carro7.jpg');
+}
+
+.img-single:nth-of-type(8) {
+    background-image: url('../images/carro8.jpg');
+}
+
+.img-single:nth-of-type(9) {
+    background-image: url('../images/carro9.jpg');
+}
+
+.img-single:nth-of-type(10) {
+    background-image: url('../images/carro10.jpg');
+}
+
+.img-single:nth-of-type(11) {
+    background-image: url('../images/sobre.jpg');
+}
+
+.img-single:nth-of-type(12) {
+    background-image: url('../images/banner.jpg');
+}
+
 @media screen and (max-width: 1400px) {
     section.banner {
         background-size: 90% auto;
@@ -962,6 +1058,27 @@ section.sobre .descricao-autor-sobre {
         width: 60%;
         line-height: normal;
     }
+
+    .img-single {
+        width: calc(100% / 3);
+        padding-top: calc(100% / 3 * 0.6);
+    }
+
+    .img-single:nth-child(4n + 1) {
+        border-left: 8px solid white;
+    }
+    
+    .img-single:nth-child(4n + 4) {
+        border-right: 8px solid white;
+    }
+    
+    .img-single:nth-child(3n + 1) {
+        border-left: 0;
+    }
+    
+    .img-single:nth-child(3n + 3) {
+        border-right: 0;
+    }
 }
 
 @media screen and (max-width: 580px) {
@@ -1028,5 +1145,26 @@ section.sobre .descricao-autor-sobre {
     .descricao {
         width: 100%;
         padding: 20px 0;
+    }
+
+    .img-single {
+        width: calc(100% / 2);
+        padding-top: calc(100% / 2 * 0.6);
+    }
+
+    .img-single:nth-child(3n + 1) {
+        border-left: 8px solid white;
+    }
+    
+    .img-single:nth-child(3n + 3) {
+        border-right: 8px solid white;
+    }
+    
+    .img-single:nth-child(2n + 1) {
+        border-left: 0;
+    }
+    
+    .img-single:nth-child(2n + 2) {
+        border-right: 0;
     }
 }
