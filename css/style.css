@@ -579,7 +579,7 @@ aside {
 }
 
 /*****************************************************************************/
-/*******************    Página de Veículo    **********************************/
+/*******************    Página de Veículo    *********************************/
 /*****************************************************************************/
 
 section.venda-single {
@@ -728,6 +728,69 @@ section.venda-single + section.contato {
 
 section.venda-single + section.contato + section.veiculos-destaque {
     padding: 0 2% 90px 2%;
+}
+
+/*****************************************************************************/
+/*******************    Página Sobre    **************************************/
+/*****************************************************************************/
+
+section.sobre {
+    min-height: 90%;
+    padding: 40px 2% 60px 2%;
+}
+
+section.sobre .container-title > h2 {
+    min-width: 170px;
+}
+
+section.sobre .container {
+    max-width: 840px;
+    margin-top: 30px;
+    flex-direction: column;
+}
+
+section.sobre .img-destaque {
+    width: 100%;
+    padding-top: 60%;
+    background-color: rgb(210, 210, 210);
+    background-image: url('../images/sobre.jpg');
+    background-position: right center;
+    background-size: cover;
+}
+
+section.sobre .descricao-autor {
+    margin-top: 20px;
+}
+
+section.sobre .descricao-autor h2 {
+    font-size: 24px;
+}
+
+.descricao-autor p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+section.sobre .descricao-autor-sobre {
+    display: flex;
+    margin-top: 40px;
+    line-height: 28px;
+}
+
+.img-small {
+    width: 20%;
+    padding-top: 20%;
+    background-color: rgb(210, 210, 210);
+    background-image: url('../images/autor.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.descricao {
+    width: 80%;
+    padding: 15px;
+    line-height: 28px;
+    font-size: 16px;
 }
 
 @media screen and (max-width: 1400px) {
@@ -889,6 +952,16 @@ section.venda-single + section.contato + section.veiculos-destaque {
     .descricao-veiculo p {
         max-width: none;
     }
+
+    .img-small {
+        width: 40%;
+        padding-top: 40%;
+    }
+
+    .descricao {
+        width: 60%;
+        line-height: normal;
+    }
 }
 
 @media screen and (max-width: 580px) {
@@ -940,5 +1013,20 @@ section.venda-single + section.contato + section.veiculos-destaque {
 
     .mini-img-wrapper {
         padding: 5px;
+    }
+
+    section.sobre .descricao-autor-sobre {
+        flex-direction: column;
+    }
+
+    .img-small {
+        width: 90%;
+        padding-top: 90%;
+        align-self: center;
+    }
+
+    .descricao {
+        width: 100%;
+        padding: 20px 0;
     }
 }
