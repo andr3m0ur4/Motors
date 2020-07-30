@@ -222,6 +222,18 @@ section.veiculos-destaque .container-title > h2 {
     background-image: url('../images/carro6.png');
 }
 
+.vitrine-destaque:nth-of-type(7) .carro-img {
+    background-image: url('../images/carro3.png');
+}
+
+.vitrine-destaque:nth-of-type(8) .carro-img {
+    background-image: url('../images/carro2.png');
+}
+
+.vitrine-destaque:nth-of-type(9) .carro-img {
+    background-image: url('../images/carro1.png');
+}
+
 .vitrine-destaque .info-carro {
     padding-left: 8px;
 }
@@ -567,14 +579,14 @@ aside {
     vertical-align: top;
 }
 
-.vitrine-venda {
+.vitrine-venda, .vitrine-eventos {
     width: 70%;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
 }
 
-.vitrine-venda .vitrine-destaque {
+.vitrine-venda .vitrine-destaque, .vitrine-eventos .vitrine-destaque {
     margin-top: 20px;
 }
 
@@ -794,7 +806,7 @@ section.sobre .descricao-autor-sobre {
 }
 
 /*****************************************************************************/
-/*******************    Página Galeria    **************************************/
+/*******************    Página Galeria    ************************************/
 /*****************************************************************************/
 
 section.galeria {
@@ -887,6 +899,29 @@ section.galeria .container {
 
 .img-single:nth-of-type(12) {
     background-image: url('../images/banner.jpg');
+}
+
+/*****************************************************************************/
+/*******************    Página Eventos    ************************************/
+/*****************************************************************************/
+
+section.eventos {
+    min-height: 90%;
+    padding: 40px 2% 60px 2%;
+}
+
+section.eventos .container-title {
+    max-width: 1280px;
+}
+
+section.eventos .content-eventos {
+    max-width: 1080px;
+    margin: 30px auto;
+}
+
+.info-carro span {
+    color: #d6a921;
+    display: block;
 }
 
 @media screen and (max-width: 1400px) {
@@ -1009,7 +1044,7 @@ section.galeria .container {
         text-align: center;
     }
 
-    .content-venda .container {
+    .content-venda .container, .content-eventos .container {
         flex-direction: column;
     }
 
@@ -1022,12 +1057,12 @@ section.galeria .container {
         display: inline-block;
     }
 
-    .search2 {
+    .search2, section.eventos .search {
         display: inline-block;
         text-align: left;
     }
 
-    .vitrine-venda {
+    .vitrine-venda, .vitrine-eventos {
         width: 100%;
     }
 
@@ -1115,7 +1150,7 @@ section.galeria .container {
         font-size: 13px;
     }
 
-    section.venda .vitrine-venda {
+    section.venda .vitrine-venda, section.eventos .vitrine-eventos {
         justify-content: center;
         text-align: center;
     }
