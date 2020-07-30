@@ -172,11 +172,11 @@ section.veiculos-destaque {
 }
 
 section.veiculos-destaque .container-title {
-    max-width: 1000px;
+    max-width: 1080px;
 }
 
 section.veiculos-destaque .container {
-    max-width: 1000px;
+    max-width: 1080px;
     padding-top: 40px;
     justify-content: center;
     align-items: center;
@@ -368,7 +368,7 @@ section.contato {
 }
 
 section.contato .container-title {
-    max-width: 1000px;
+    max-width: 1080px;
 }
 
 section.contato form {
@@ -462,7 +462,7 @@ footer p {
 
 section.venda {
     min-height: 90%;
-    padding: 90px 2%;
+    padding: 40px 2%;
 }
 
 section.venda .container-title {
@@ -595,7 +595,11 @@ aside {
 /*****************************************************************************/
 
 section.venda-single {
-    padding: 80px 2% 0 2%;
+    padding: 40px 2%;
+}
+
+section.venda-single .container-title {
+    max-width: 1280px;
 }
 
 section.venda-single .container {
@@ -748,7 +752,11 @@ section.venda-single + section.contato + section.veiculos-destaque {
 
 section.sobre {
     min-height: 90%;
-    padding: 40px 2% 60px 2%;
+    padding: 40px 2%;
+}
+
+section.sobre .container-title {
+    max-width: 1280px;
 }
 
 section.sobre .container-title > h2 {
@@ -811,7 +819,11 @@ section.sobre .descricao-autor-sobre {
 
 section.galeria {
     min-height: 90%;
-    padding: 40px 2% 60px 2%;
+    padding: 40px 2%;
+}
+
+section.galeria .container-title {
+    max-width: 1280px;
 }
 
 section.galeria .container {
@@ -907,7 +919,7 @@ section.galeria .container {
 
 section.eventos {
     min-height: 90%;
-    padding: 40px 2% 60px 2%;
+    padding: 40px 2%;
 }
 
 section.eventos .container-title {
