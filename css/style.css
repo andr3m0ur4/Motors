@@ -755,7 +755,7 @@ section.sobre .container-title > h2 {
     min-width: 170px;
 }
 
-section.sobre .container {
+section.sobre .container, section.evento-single .container {
     max-width: 840px;
     margin-top: 30px;
     flex-direction: column;
@@ -770,15 +770,15 @@ section.sobre .img-destaque {
     background-size: cover;
 }
 
-section.sobre .descricao-autor {
+section.sobre .descricao-autor, section.evento-single .descricao-evento {
     margin-top: 20px;
 }
 
-section.sobre .descricao-autor h2 {
+section.sobre .descricao-autor h2, section.evento-single .descricao-evento h2 {
     font-size: 24px;
 }
 
-.descricao-autor p {
+.descricao-autor p, .descricao-evento p {
     font-size: 16px;
     margin-top: 10px;
 }
@@ -922,6 +922,45 @@ section.eventos .content-eventos {
 .info-carro span {
     color: #d6a921;
     display: block;
+}
+
+section.evento-single .container {
+    margin: 40px auto;
+}
+
+section.evento-single .img-destaque {
+    width: 100%;
+    padding-top: 60%;
+    background-color: rgb(210, 210, 210);
+    background-image: url('../images/banner.jpg');
+    background-position: right center;
+    background-size: cover;
+}
+
+section.evento-single .descricao-evento h2 {
+    margin-top: 15px;
+}
+
+.descricao-evento p {
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.descricao-evento h3 {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.descricao-evento span {
+    color: #d6a921;
+}
+
+section.evento-single .container a {
+    color: #353535;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 40px 0;
+    width: 170px;
 }
 
 @media screen and (max-width: 1400px) {
