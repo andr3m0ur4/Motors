@@ -633,7 +633,7 @@ section.venda-single .container {
     padding-top: 60%;
     background-position: center;
     background-size: cover;
-    background-image: url('../images/carro2.png');
+    /*background-image: url('../images/carro2.png');*/
     background-repeat: no-repeat;
 }
 
@@ -691,13 +691,13 @@ section.venda-single .container {
 }
 
 .nav-galeria-wrapper {
-    width: 200%;
+    /*width: 200%;*/
     display: flex;
 }
 
 .mini-img-wrapper {
     padding: 7px;
-    width: calc(33.3% * (100 / 200));
+    /*width: calc(33.3% * (100 / 200));*/
 }
 
 .nav-galeria-wrapper .ativo {
