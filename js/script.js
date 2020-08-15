@@ -37,6 +37,7 @@ $(() => {
             $('.barra-preco-fill').css('width', currentValue + '%')
 
             preco_atual = (currentValue / 100) * preco_maximo
+            preco_atual = formatarPreco(preco_atual)
             $('.preco-pesquisa').html('R$ ' + preco_atual)
         }
     })
@@ -115,4 +116,23 @@ function enableTextSelection() {
         '-o-user-select': 'auto',
         'user-select': 'auto',
     })
+}
+
+function formatarPreco(preco) {
+    preco = preco.toFixed(2)
+    preco_array = preco.split('.')
+
+    let novo_preco = formatarTotal(preco_array)
+
+    return novo_preco
+}
+
+function formatarTotal(preco_array) {
+    if (preco_array[0] < 1000) {
+        return preco_array[0] + ',' + preco_array[1]
+    } else if (preco_array[0] < 10000) {
+        return preco_array[0][0] + '.' + preco_array[0].substr(1, preco_array[0].length) + ',' + preco_array[1]
+    } else {
+        return preco_array[0][0] + preco_array[0][1] + '.' + preco_array[0].substr(2, preco_array[0].length) + ',' + preco_array[1]
+    }
 }
