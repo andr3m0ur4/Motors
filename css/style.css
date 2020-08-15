@@ -501,7 +501,7 @@ aside {
     position: absolute;
     left: 0;
     top: 0;
-    width: 30%;
+    width: 0;
     height: 20px;
     border-radius: 20px;
     background-image: linear-gradient(to bottom, white, rgb(200, 200, 200));
@@ -514,7 +514,7 @@ aside {
     border-radius: 8px;
     background-image: linear-gradient(to bottom, white, rgb(180, 180, 180));
     position: absolute;
-    left: calc(30% - 13px);
+    left: 0;
     top: -3px;
     cursor: pointer;
 }
