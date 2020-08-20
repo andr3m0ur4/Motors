@@ -2,6 +2,9 @@ let img_show = 3
 let max_index
 let current_index = 0
 
+let amount_depoimento
+let current_depoimento = 0
+
 $(() => {
 
     iniciarHome()
@@ -45,6 +48,11 @@ $(() => {
             preco_atual = formatarPreco(preco_atual)
             $('.preco-pesquisa').html('R$ ' + preco_atual)
         }
+    })
+
+    // Menu responsivo
+    $('header nav').click(e => {
+        $(e.target).find('ul').slideToggle()
     })
 })
 
@@ -106,6 +114,14 @@ function fazerRequisicao(href) {
                 $('html, body').animate({ 'scrollTop': $('#contato').offset().top })
                 e.preventDefault()
             })
+
+            //checkUrl()
+
+            // Sistema de navegação nos depoimentos na home
+            amount_depoimento = $('.depoimento-single p').length
+
+            iniciarDepoimentos()
+            navegarDepoimentos()
         } else if (href == './pages/veiculo.html') {
             iniciarSlider()
             navegarSlider()
@@ -196,4 +212,40 @@ function clickSlider() {
     })
 
     $('.mini-img-wrapper').eq(0).click()
+}
+
+function checkUrl() {
+    let search = location.search.split('?')
+    let current_page = search[1]
+
+    if (current_page != undefined && current_page == 'contato') {
+        $('html, body').animate({ 'scrollTop': $('#contato').offset().top })
+    }
+}
+
+function iniciarDepoimentos() {
+    $('.depoimento-single p').hide()
+    $('.depoimento-single p').eq(0).show()
+}
+
+function navegarDepoimentos() {
+    $('[next]').click(() => {
+        current_depoimento++
+        if (current_depoimento >= amount_depoimento) {
+            current_depoimento = 0
+        }
+
+        $('.depoimento-single p').hide()
+        $('.depoimento-single p').eq(current_depoimento).show()
+    })
+
+    $('[prev]').click(() => {
+        current_depoimento--
+        if (current_depoimento < 0) {
+            current_depoimento = amount_depoimento - 1
+        }
+
+        $('.depoimento-single p').hide()
+        $('.depoimento-single p').eq(current_depoimento).show()
+    })
 }
